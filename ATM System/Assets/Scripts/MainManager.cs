@@ -55,7 +55,6 @@ public class MainManager : MonoBehaviour
     {
         Mypocket = 100000;
         Balance = 50000;
-        InputMoney = 0;
     }
 
 

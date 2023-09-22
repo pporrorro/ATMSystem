@@ -12,6 +12,9 @@ public class DepositManager : MonoBehaviour
     [SerializeField] GameObject DepositGroup;
     [SerializeField] Text _mypocket;
     [SerializeField] Text _balance;
+
+    private MainManager _manager;
+
     public void SetDepositGroup()
     {
         MainGroup.SetActive(false);
@@ -25,8 +28,9 @@ public class DepositManager : MonoBehaviour
 
     void Start()
     {
-        MainManager.Instance.OnMypocketChanged += UpdateMypocketText;
+        _manager.OnMypocketChanged += UpdateMypocketText;
         MainManager.Instance.OnBalanceChanged += UpdateBalanceText;
+        MainManager.Instance.OnInputMoney += UpdateBalanceText;
     }
 
     private void UpdateBalanceText(int balance)
@@ -39,4 +43,15 @@ public class DepositManager : MonoBehaviour
         _mypocket.text = mypocket.ToString("N0");
     }
 
+    private void DepositToBalance(int inputmoney)
+    {
+        _manager.Mypocket -= inputmoney;
+        if (_manager.Mypocket < 0)
+        {
+            _manager.Mypocket += inputmoney;
+            return;
+        }
+        _manager.Balance += inputmoney;
+        _manager.InputMoney = 0;
+    }
 }

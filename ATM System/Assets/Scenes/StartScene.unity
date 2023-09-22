@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 1236965}
   - component: {fileID: 1236964}
   - component: {fileID: 1236963}
+  - component: {fileID: 1236966}
   m_Layer: 0
   m_Name: Button Input
   m_TagString: Untagged
@@ -205,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1236964}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1236966}
+        m_TargetAssemblyTypeName: DepositController, Assembly-CSharp
+        m_MethodName: OnDepositClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1236964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +257,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236961}
   m_CullTransparentMesh: 1
+--- !u!114 &1236966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f252cdc5e779a64ca8dfc6d0ab3154a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputMoney: {fileID: 1507227044}
 --- !u!1 &25824411
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +361,6 @@ GameObject:
   - component: {fileID: 74711845}
   - component: {fileID: 74711844}
   - component: {fileID: 74711843}
-  - component: {fileID: 74711846}
   m_Layer: 5
   m_Name: Button Deposit
   m_TagString: Untagged
@@ -457,22 +482,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74711841}
   m_CullTransparentMesh: 1
---- !u!114 &74711846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74711841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49f7fdcc7a4c1aa40b97974f02eb77a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainGroup: {fileID: 2075190856}
-  DepositGroup: {fileID: 708726419}
-  _mypocket: {fileID: 1070060142}
-  _balance: {fileID: 25824413}
 --- !u!1 &215896655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,19 +1314,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 558456554}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2075190859}
-        m_TargetAssemblyTypeName: DepositController, Assembly-CSharp
-        m_MethodName: DepositToBalance
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10000
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &558456554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1881,6 +1878,7 @@ GameObject:
   - component: {fileID: 1102785954}
   - component: {fileID: 1102785953}
   - component: {fileID: 1102785952}
+  - component: {fileID: 1102785956}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1937,8 +1935,8 @@ Canvas:
   m_GameObject: {fileID: 1102785951}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1975,6 +1973,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1102785956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102785951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12e4bf0d205fea94697424f2ebb21940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1169394232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2453,6 +2463,7 @@ GameObject:
   - component: {fileID: 1570860406}
   - component: {fileID: 1570860405}
   - component: {fileID: 1570860404}
+  - component: {fileID: 1570860407}
   m_Layer: 5
   m_Name: Btn 50000
   m_TagString: Untagged
@@ -2523,7 +2534,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1570860405}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1570860407}
+        m_TargetAssemblyTypeName: DepositController, Assembly-CSharp
+        m_MethodName: OnDepositClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1570860405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2562,6 +2585,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570860402}
   m_CullTransparentMesh: 1
+--- !u!114 &1570860407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570860402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f252cdc5e779a64ca8dfc6d0ab3154a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputMoney: {fileID: 1169394234}
 --- !u!1 &1641778491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2649,6 +2685,7 @@ GameObject:
   - component: {fileID: 1680602671}
   - component: {fileID: 1680602670}
   - component: {fileID: 1680602669}
+  - component: {fileID: 1680602672}
   m_Layer: 5
   m_Name: Btn 30000
   m_TagString: Untagged
@@ -2720,14 +2757,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1680602672}
         m_TargetAssemblyTypeName: DepositController, Assembly-CSharp
-        m_MethodName: DepositCash
+        m_MethodName: OnDepositClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 30000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2770,6 +2807,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680602667}
   m_CullTransparentMesh: 1
+--- !u!114 &1680602672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680602667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f252cdc5e779a64ca8dfc6d0ab3154a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputMoney: {fileID: 1182354722}
 --- !u!1 &1694612793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,18 +2903,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3151,8 +3189,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2075190857}
-  - component: {fileID: 2075190858}
-  - component: {fileID: 2075190859}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -3177,31 +3213,6 @@ Transform:
   - {fileID: 1694612794}
   m_Father: {fileID: 1102785955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2075190858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075190856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12e4bf0d205fea94697424f2ebb21940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2075190859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075190856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f252cdc5e779a64ca8dfc6d0ab3154a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputMoney: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
