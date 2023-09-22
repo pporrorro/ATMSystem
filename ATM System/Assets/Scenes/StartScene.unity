@@ -801,7 +801,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 249796824}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1226682764}
+        m_TargetAssemblyTypeName: DepositManager, Assembly-CSharp
+        m_MethodName: SetMainGroup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &249796824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,7 +1017,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 18
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -1244,6 +1256,7 @@ GameObject:
   - component: {fileID: 558456555}
   - component: {fileID: 558456554}
   - component: {fileID: 558456553}
+  - component: {fileID: 558456556}
   m_Layer: 5
   m_Name: Btn 10000
   m_TagString: Untagged
@@ -1314,7 +1327,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 558456554}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 558456556}
+        m_TargetAssemblyTypeName: DepositController, Assembly-CSharp
+        m_MethodName: OnDepositClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &558456554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1353,6 +1378,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558456551}
   m_CullTransparentMesh: 1
+--- !u!114 &558456556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558456551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f252cdc5e779a64ca8dfc6d0ab3154a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputMoney: {fileID: 965106591}
 --- !u!1 &708726419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,6 +2002,7 @@ RectTransform:
   - {fileID: 1014866948}
   - {fileID: 1827393772}
   - {fileID: 2075190857}
+  - {fileID: 2145923787}
   - {fileID: 708726420}
   - {fileID: 1551239568}
   m_Father: {fileID: 0}
@@ -3211,6 +3250,37 @@ Transform:
   m_Children:
   - {fileID: 74711842}
   - {fileID: 1694612794}
+  m_Father: {fileID: 1102785955}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2145923786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2145923787}
+  m_Layer: 0
+  m_Name: Withdraw Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2145923787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145923786}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 188459.98, y: 17279.998, z: -9719.999}
+  m_LocalScale: {x: 108, y: 108, z: 108}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 1102785955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
